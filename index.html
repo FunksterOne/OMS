@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Den strategiske situasjonen i Ukraina — kritisk gjennomgang</title>
+<meta name="description" content="Foredrag av gen.ltn. (P) Arne Bård Dalhaug i Oslo Militære Samfund, 20.04.2026 — med kritiske merknader og verifisert faktasjekk av de ferske påstandene.">
+<!-- Open Graph: bytt ut DITT-DOMENE med den faktiske adressen etter at du har lagt filen ut (f.eks. dalhaug-ukraina.vercel.app) -->
+<meta property="og:type" content="article">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:site_name" content="Strategisk gjennomgang">
+<meta property="og:title" content="Den strategiske situasjonen i Ukraina — kritisk gjennomgang">
+<meta property="og:description" content="Foredrag av gen.ltn. (P) Arne Bård Dalhaug i Oslo Militære Samfund, 20.04.2026 — med kritiske merknader og verifisert faktasjekk.">
+<meta property="og:url" content="https://DITT-DOMENE/">
+<meta property="og:image" content="https://DITT-DOMENE/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Den strategiske situasjonen i Ukraina etter den femte krigsvinteren">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Den strategiske situasjonen i Ukraina — kritisk gjennomgang">
+<meta name="twitter:description" content="Foredrag av Arne Bård Dalhaug, Oslo Militære Samfund 20.04.2026 — kritiske merknader og faktasjekk.">
+<meta name="twitter:image" content="https://DITT-DOMENE/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0d1117;--ink-2:#11171f;--panel:#161d27;--panel-2:#1b232f;
+  --line:#2a3543;--line-soft:#212b37;--paper:#ece6d8;--paper-dim:#b9b3a6;--muted:#8b95a3;
+  --gold:#c8a456;--gold-bright:#e0c074;--no-red:#c8102e;--no-blue:#3a6ea5;
+  --v-ok:#6bbf7a;--v-ok-bg:#16271b;--v-nu:#d6a94a;--v-nu-bg:#2a2113;
+  --v-un:#d98248;--v-un-bg:#2a1c12;--v-val:#6fa8d6;--v-val-bg:#13212e;--crit:#9ad0d4;
+  --nav-w:264px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--paper);font-family:"Newsreader",Georgia,serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none}
+.bg::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(120% 60% at 85% -5%,rgba(58,110,165,.14),transparent 55%),radial-gradient(80% 50% at -5% 105%,rgba(200,164,86,.08),transparent 55%),linear-gradient(180deg,#0d1117,#0b0f15)}
+.bg svg{position:absolute;inset:0;width:100%;height:100%;opacity:.45}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.04;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* progress + sticky header */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold-bright));z-index:60;box-shadow:0 0 12px rgba(200,164,86,.5)}
+.topbar{position:fixed;top:0;left:0;right:0;height:46px;z-index:55;display:flex;align-items:center;justify-content:space-between;
+  padding:0 22px;background:rgba(13,17,23,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-soft);
+  font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+.topbar .brand{display:flex;align-items:center;gap:10px}
+.topbar .star{width:16px;height:16px;color:var(--gold)}
+.topbar #hereLabel{color:var(--gold-bright);max-width:50vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* shell */
+.shell{position:relative;z-index:5;display:grid;grid-template-columns:var(--nav-w) 1fr;max-width:1500px;margin:0 auto}
+/* sidebar TOC */
+.toc{position:sticky;top:46px;height:calc(100vh - 46px);overflow:auto;padding:28px 18px 40px 26px;border-right:1px solid var(--line-soft)}
+.toc::-webkit-scrollbar{width:6px}.toc::-webkit-scrollbar-thumb{background:var(--line);border-radius:4px}
+.toc h2{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.toc a{display:block;text-decoration:none;color:var(--paper-dim);font-size:13.5px;line-height:1.3;padding:7px 11px 7px 13px;border-left:2px solid transparent;border-radius:0 4px 4px 0;transition:.16s;margin-bottom:2px}
+.toc a:hover{color:var(--paper);background:rgba(255,255,255,.03)}
+.toc a.active{color:var(--gold-bright);border-left-color:var(--gold);background:rgba(200,164,86,.07)}
+.toc a .tnum{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--gold);margin-right:8px}
+.toc a.part{margin-top:14px;font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);pointer-events:none;border:none;padding-bottom:2px}
+
+/* main */
+main{padding:0 clamp(24px,4vw,72px) 120px;min-width:0}
+.chap{scroll-margin-top:62px;padding:56px 0;border-bottom:1px solid var(--line-soft);max-width:1080px}
+.chap:last-child{border-bottom:none}
+
+/* hero */
+.hero{scroll-margin-top:62px;min-height:calc(100vh - 46px);display:flex;flex-direction:column;justify-content:center;padding:80px 0 64px;position:relative;max-width:none}
+.hero .megastar{position:absolute;right:-2%;top:50%;transform:translateY(-50%);width:min(56vh,560px);color:rgba(200,164,86,.06);pointer-events:none}
+.hero .eyebrow{font-family:"JetBrains Mono",monospace;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.hero h1{font-family:"Fraunces",serif;font-weight:900;font-size:clamp(38px,5.5vw,82px);line-height:1;letter-spacing:-.02em;max-width:17ch;margin-bottom:24px}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--gold-bright)}
+.hero .meta{font-size:clamp(15px,1.4vw,18px);color:var(--paper-dim);max-width:54ch;line-height:1.65}
+.hero .meta b{color:var(--paper);font-weight:600}
+.hero .scrollcue{margin-top:42px;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--muted);display:flex;align-items:center;gap:10px}
+.hero .scrollcue .arr{animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+
+/* section heading */
+.kicker{display:flex;align-items:center;gap:13px;margin-bottom:14px}
+.kicker .tag{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);background:var(--gold);padding:5px 11px;font-weight:700;border-radius:2px}
+.kicker .num{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.16em;color:var(--muted)}
+.kicker .rule{flex:1;height:1px;background:linear-gradient(90deg,var(--line),transparent)}
+h2.title{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(24px,3vw,40px);line-height:1.08;letter-spacing:-.01em;color:var(--paper);margin-bottom:26px;max-width:22ch}
+.subtitle{font-family:"Newsreader",serif;font-style:italic;color:var(--gold-bright);font-size:clamp(15px,1.4vw,19px);margin:-16px 0 26px}
+
+/* two-col blocks (now unconstrained height) */
+.grid2{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(20px,2.6vw,40px);align-items:start}
+.block{display:flex;flex-direction:column;gap:16px;min-width:0}
+.panel-label{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:9px}
+.panel-label::before{content:"";width:14px;height:1px;background:var(--gold)}
+
+.source{background:var(--panel);border:1px solid var(--line-soft);border-left:3px solid var(--gold);border-radius:4px;padding:20px 22px}
+.source p{margin-bottom:11px}.source p:last-child{margin-bottom:0}
+.source ul{list-style:none}
+.source li{position:relative;padding-left:20px;margin-bottom:9px}
+.source li::before{content:"›";position:absolute;left:0;top:-1px;color:var(--gold);font-weight:700}
+.source li.hi{color:var(--gold-bright)}.source li.hi::before{color:var(--gold-bright)}
+.q{font-family:"Fraunces",serif;font-style:italic;font-size:1.15em;line-height:1.35;border-left:2px solid var(--gold);padding:4px 0 4px 16px;margin:8px 0 14px}
+.q cite{display:block;font-family:"JetBrains Mono",monospace;font-style:normal;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.headline-card{background:#0c1016;border:1px solid var(--line);border-radius:5px;padding:16px 18px;margin:6px 0 12px}
+.headline-card .src{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--no-red);font-weight:700;margin-bottom:7px}
+.headline-card .hl{font-family:"Fraunces",serif;font-weight:600;font-size:1.1em;line-height:1.18;margin-bottom:6px}
+.headline-card .dek{font-size:.92em;color:var(--paper-dim)}
+.leaders{display:flex;gap:8px;margin:10px 0;flex-wrap:wrap}
+.leaders span{font-family:"JetBrains Mono",monospace;font-size:11px;border:1px solid var(--line);padding:5px 10px;border-radius:20px;color:var(--paper-dim);background:#0c1016}
+.statline{display:flex;gap:14px;margin:12px 0;flex-wrap:wrap}
+.stat{background:#0c1016;border:1px solid var(--line);border-radius:5px;padding:12px 16px;flex:1;min-width:130px}
+.stat b{display:block;font-family:"Fraunces",serif;font-size:1.7em;color:var(--gold-bright);line-height:1}
+.stat small{font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-top:6px}
+
+.note{border-radius:5px;padding:16px 18px;font-size:.95em}
+.note.crit{background:rgba(154,208,212,.06);border:1px solid rgba(154,208,212,.22);border-left:3px solid var(--crit)}
+.note h4{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px;color:var(--crit)}
+.note.crit p{color:#d6e4e5;margin-bottom:9px}.note.crit p:last-child{margin-bottom:0}
+.note strong{color:var(--paper);font-weight:600}
+
+.fc{border:1px solid var(--line);border-radius:5px;overflow:hidden;background:var(--panel)}
+.fc-head{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:11px 16px;border-bottom:1px solid var(--line-soft)}
+.fc-item{padding:13px 16px;border-bottom:1px solid var(--line-soft)}.fc-item:last-child{border-bottom:none}
+.verdict{display:inline-flex;align-items:center;gap:6px;font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;padding:3px 9px;border-radius:3px;margin-bottom:8px}
+.v-ok{color:var(--v-ok);background:var(--v-ok-bg);border:1px solid rgba(107,191,122,.3)}
+.v-nu{color:var(--v-nu);background:var(--v-nu-bg);border:1px solid rgba(214,169,74,.3)}
+.v-un{color:var(--v-un);background:var(--v-un-bg);border:1px solid rgba(217,130,72,.3)}
+.v-val{color:var(--v-val);background:var(--v-val-bg);border:1px solid rgba(111,168,214,.3)}
+.fc-claim{font-style:italic;color:var(--paper-dim);font-size:.9em;margin-bottom:6px}
+.fc-find{font-size:.92em}
+.fc-find .srcref{font-family:"JetBrains Mono",monospace;font-size:10px;color:var(--muted);letter-spacing:.05em}
+
+/* agenda */
+.agenda{display:grid;grid-template-columns:1fr 1fr;gap:6px 38px}
+.agenda .row{display:flex;gap:16px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line-soft)}
+.agenda .row .n{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--gold);font-weight:700;min-width:26px}
+.agenda .row .t{font-family:"Fraunces",serif;font-size:clamp(16px,1.5vw,20px)}
+.agenda .row.key .t{color:var(--gold-bright)}
+
+/* dashboard */
+.dash{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.dcard{background:var(--panel);border:1px solid var(--line-soft);border-radius:6px;padding:16px 18px}
+.dcard .verdict{margin-bottom:10px}
+.dcard h5{font-family:"Fraunces",serif;font-weight:600;font-size:1.08em;margin-bottom:7px;line-height:1.2}
+.dcard p{font-size:.88em;color:var(--paper-dim);line-height:1.45}
+.dcard .srcref{font-family:"JetBrains Mono",monospace;font-size:9.5px;color:var(--muted);letter-spacing:.04em;display:block;margin-top:8px}
+
+/* sources */
+.srclist{columns:2;column-gap:44px}
+.srclist .s{break-inside:avoid;margin-bottom:14px;padding-left:16px;position:relative;color:var(--paper-dim);font-size:.92em}
+.srclist .s::before{content:"▪";position:absolute;left:0;color:var(--gold)}
+.srclist .s b{color:var(--paper);font-weight:600;font-family:"JetBrains Mono",monospace;font-size:.85em;letter-spacing:.04em}
+.method{background:var(--panel);border:1px solid var(--line-soft);border-left:3px solid var(--crit);border-radius:5px;padding:18px 20px;margin-top:18px;font-size:.95em;color:var(--paper-dim)}
+.method b{color:var(--paper)}
+
+/* to-top */
+.totop{position:fixed;bottom:22px;right:24px;z-index:50;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);
+  background:var(--panel);color:var(--paper);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:.25s;text-decoration:none}
+.totop.show{opacity:1;pointer-events:auto}
+.totop:hover{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+
+@media (max-width:1000px){
+  .shell{grid-template-columns:1fr}
+  .toc{display:none}
+  .grid2{grid-template-columns:1fr;gap:18px}
+  .agenda{grid-template-columns:1fr}
+  .srclist{columns:1}
+  .hero .megastar{opacity:.5}
+}
+@media print{
+  .bg,.grain,.toc,.topbar,.progress,.totop,.hero .scrollcue{display:none}
+  .shell{grid-template-columns:1fr;max-width:none}
+  body{background:#fff;color:#111}
+  .chap{break-inside:avoid;border-color:#ccc}
+  .grid2{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="bg">
+<svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+<g stroke="rgba(120,140,170,.10)" stroke-width="1" fill="none">
+<path d="M1440 140 L900 520 L1200 900"/><path d="M1440 220 L980 560 L1280 900"/>
+<path d="M1440 300 L1060 600 L1360 900"/><path d="M0 760 L380 480 L120 0"/><path d="M0 840 L460 520 L220 0"/>
+</g></svg>
+</div>
+<div class="grain"></div>
+<div class="progress" id="progress"></div>
+
+<div class="topbar">
+  <div class="brand">
+    <svg class="star" viewBox="0 0 24 24" fill="none"><g stroke="currentColor" stroke-width="1.4"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="4.9" y1="4.9" x2="19.1" y2="19.1"/><line x1="19.1" y1="4.9" x2="4.9" y2="19.1"/></g></svg>
+    <span>Oslo Militære Samfund · 20.04.2026 · A. B. Dalhaug</span>
+  </div>
+  <div id="hereLabel">Forside</div>
+</div>
+
+<div class="shell">
+  <nav class="toc" id="toc"><h2>Innhold</h2><div id="tocList"></div></nav>
+  <main id="main"></main>
+</div>
+<a href="#top" class="totop" id="totop" title="Til toppen">↑</a>
+
+<script>
+const V={
+  ok:'<span class="verdict v-ok">● Bekreftet</span>',
+  nu:'<span class="verdict v-nu">◐ Nyansert</span>',
+  un:'<span class="verdict v-un">○ Usikkert</span>',
+  val:'<span class="verdict v-val">◆ Vurdering</span>'
+};
+
+const sections=[
+{type:'hero'},
+{type:'agenda', nav:'Disposisjon'},
+
+{tag:'Del 1 · Innramming', num:'01', title:'Sir Michael Howard setter scenen',
+ source:`<div class="q">«Svært mange kriger er blitt avgjort av beslutninger truffet på steder som lå veldig langt borte fra frontlinjen»<cite>Tilskrevet Sir Michael Howard</cite></div>
+ <p>Dalhaugs anvendelse:</p>
+ <ul><li>Dette gjelder i særlig stor grad Russlands krig mot Ukraina.</li>
+ <li>Krigen er betydelig påvirket av <em>andre</em> kriger — terrorangrepet mot Israel oktober 2023 og USA/Israels pågående krig mot Iran — samt av Kinas ambisjoner i Asia og globalt.</li>
+ <li class="hi">Også norsk sikkerhet er sterkt påvirket av global utvikling.</li></ul>`,
+ crit:`<p>Foredragets <strong>bærende premiss</strong>: Ukraina-krigen kan ikke forstås isolert. Det rettferdiggjør hvorfor Dalhaug bruker store deler av tiden på USA, Asia og NATO før selve Ukraina.</p>
+ <p>Howard (1922–2019) var en britisk militærhistoriker og medgrunnlegger av IISS. Tanken samsvarer med hans forfatterskap, men <strong>eksakt ordlyd og kilde lar seg ikke verifisere fra slidet</strong> — bør kontrolleres ved sitering.</p>`,
+ fc:[{v:'ok',claim:'«USA/Israels pågående krig mot Iran»',find:'Bekreftet. USA og Israel innledet et omfattende angrep på Iran 28.02.2026 («Operation Epic Fury»), der bl.a. Irans øverste leder Khamenei ble drept. Betinget våpenhvile 7.–8. april, deretter fortsatt spenning om Hormuz-stredet. <span class="srcref">Kilder: Britannica, House of Commons Library, Wikipedia, Al Jazeera</span>'}]},
+
+{tag:'Del 1 · Innramming', num:'02', title:'«Great Man Theory» og økende global usikkerhet',
+ source:`<div class="headline-card"><div class="src">Aftenposten · 16.04.2026</div><div class="hl">Pave Leo: Verden «herjes av en håndfull tyranner»</div><div class="dek">Paven går hardt ut mot verdensledere. Han sier de bruker milliarder på «drap og ødeleggelse» i en tale i Kamerun.</div></div>
+ <p>Dalhaug navngir visuelt hvem han mener det dreier seg om:</p>
+ <div class="leaders"><span>Donald Trump · USA</span><span>Xi Jinping · Kina</span><span>Vladimir Putin · Russland</span></div>
+ <ul><li>«Disse tre eldre mennene har i betydelig grad bragt verden dit vi er nå i dag … vil trolig i stor grad påvirke den globale utviklingen i flere tiår fremover, og i negativ retning.»</li>
+ <li>«Vi ser også en veldig personifisering av utenrikspolitikken — statsledere sender SMSer til hverandre mens utenriksministrene 'tvinner tommeltotter'.»</li></ul>`,
+ crit:`<p>Dalhaug gjør det implisitte eksplisitt: ved å plassere <strong>USAs president på linje med de to autoritære lederne</strong> i Kina og Russland tar han et markant analytisk standpunkt — ikke en nøytral observasjon. Koblingen til de tre er hans egen; paven talte i generelle ordelag.</p>
+ <p>«I flere tiår fremover» er strengt tatt tvilsomt for tre menn over 70 — poenget gir best mening om man leser det som at <strong>beslutningene</strong>, ikke personene, varer i tiår.</p>
+ <p>Metodisk: «Great Man Theory» er ett av flere forklaringsnivåer. Strukturelle og institusjonelle modeller ville vektlagt helt andre drivkrefter.</p>`,
+ fc:[{v:'ok',claim:'Pavens utsagn om «en håndfull tyranner»',find:'Bekreftet. Pave Leo XIV holdt 16.04.2026 en tale i Bamenda, Kamerun, der han sa verden «herjes av en håndfull tyranner» og kritiserte at milliarder brukes på «drap og ødeleggelse». <span class="srcref">Kilder: Washington Post, France 24, NPR, PBS, Times of Israel</span>'},
+ {v:'nu',claim:'At utsagnet rettes mot Trump, Xi og Putin',find:'Delvis. Mediedekningen koblet pavens kritikk særlig til en pågående offentlig konflikt med Trump og til motstand mot Iran-krigen. Tredelingen (Trump/Xi/Putin) er Dalhaugs tolkning, ikke pavens ordlyd. <span class="srcref">Kilder: NPR, Washington Post</span>'}]},
+
+{tag:'Del 2 · Globale teatre', num:'03', title:'USA og krigen mot Iran — en økende global usikkerhet',
+ source:`<ul><li>Ingen vet hvordan denne krigen ender — heller.</li>
+ <li>Havretten og fri ferdsel under økende press — havene som «globalt fellesområde» er truet.</li>
+ <li>Verdens energitilgang opplever usikre tider.</li>
+ <li>Større spørsmålstegn ved NATOs fremtid.</li>
+ <li>Internasjonal lov og rett svekkes til stadighet.</li>
+ <li class="hi">Økende inflasjon, lavere vekst, uro i finansmarkedene og press på statsbudsjetter.</li>
+ <li class="hi">Faren for matmangel er reell.</li></ul>`,
+ crit:`<p>Dette er Howard-premisset i praksis: en krig langt fra Ukraina binder amerikanske ressurser og oppmerksomhet og skaper globale ringvirkninger.</p>
+ <p>Selve <strong>årsakskjeden</strong> (regional krig → energi-/skipsfartsforstyrrelse → inflasjon → budsjett- og matvarepress) er en velkjent og empirisk plausibel transmisjonsmekanisme. Det er <strong>omfanget</strong> av utslagene som måtte tallfestes — logikken er solid uavhengig av detaljene.</p>`,
+ fc:[{v:'ok',claim:'Forstyrrelse av Hormuz og energimarkeder',find:'Bekreftet. Konflikten ga alvorlig forstyrrelse av trafikken gjennom Hormuz-stredet, drivstoffmangel i deler av Asia og ringvirkninger i verdensøkonomien. <span class="srcref">Kilde: Britannica «2026 Iran war»</span>'}]},
+
+{tag:'Del 1 · Innramming', num:'04', title:'Antonio Gramsci og «interregnum»',
+ source:`<p><em>Fra «Fengselsnotatene» (Quaderni del carcere):</em></p>
+ <ul><li>Gramsci skrev om <em>interregnum</em> — en overgangsperiode der den etablerte orden har mistet evnen til å strukturere staters atferd, mens en ny orden ennå ikke har konsolidert seg. Kjennetegn: maktvakuum, normativ fragmentering, økt strategisk usikkerhet.</li>
+ <li>«Det gamle dør og det nye kan ikke bli født» — i mellomrommet oppstår «monstre» / «morbide fenomener».</li>
+ <li class="hi">Et interregnum kan vare i flere tiår, preget av kaos; alt føles «oppe i luften» og lite får avklart status.</li></ul>`,
+ crit:`<p>Dalhaug skifter fra det individsentrerte (Great Man) til det <strong>strukturelle</strong>: vår epoke som et mellomrike der den USA-ledede regelbaserte orden forvitrer uten en etterfølger.</p>
+ <p>Konkurrerende lesning: at vi ikke er i et tomrom, men i en pågående maktforskyvning mot en multipolar eller Kina-sentrert orden — altså at en ny orden <em>er</em> i ferd med å konsolidere seg.</p>
+ <p>Note: slidet skriver «Antoni» — korrekt er <strong>Antonio</strong> Gramsci.</p>`},
+
+{tag:'Del 1 · Innramming', num:'05', title:'«Det er ingen som vinner historien»',
+ source:`<p style="color:var(--muted);font-style:italic;margin-bottom:14px">Bare sjekk historiske atlas! — en kanon av strateger samles om én tese:</p>
+ <ul><li><strong>Clausewitz:</strong> I krig er resultatet aldri endelig.</li>
+ <li><strong>Geyl:</strong> Historien er en debatt uten slutt.</li>
+ <li><strong>Morgenthau:</strong> Militære slag tar slutt, politisk konflikt aldri.</li>
+ <li><strong>Liddell Hart:</strong> Storstrategi ser forbi krigen, mot den etterfølgende («bedre») fred.</li>
+ <li><strong>Kennan:</strong> Forlat skillet fred/krig — internasjonal politikk er en evig kamprytme.</li>
+ <li><strong>Kissinger:</strong> Utenrikspolitikk har ingen sluttilstand.</li>
+ <li class="hi"><strong>Dolman:</strong> Slag og kriger kan ende, men samspillet mellom stater fortsetter — man kan ikke «vinne historien».</li></ul>`,
+ crit:`<p>Den realistisk/realpolitiske underbyggingen av tesen om at konflikt er en <strong>permanent tilstand</strong> — grunnlaget for hvordan Dalhaug senere tolker Ukraina-krigens mulige «slutt».</p>
+ <p>Et bevisst utvalg: alle de siterte deler samme grunnsyn. En liberal-institusjonalist ville innvendt at noen konflikter <em>får</em> varige løsninger (fransk-tysk forsoning etter 1945) og at institusjoner kan dempe den evige kampen.</p>
+ <p>Note: slidet skriver «Liddel Hart» — korrekt er <strong>Liddell Hart</strong>.</p>`},
+
+{tag:'Del 1 · Innramming', num:'06', title:'Å se historien som lange linjer',
+ source:`<ul><li>«Den lange revolusjonen» 1789–1815 — François Furet.</li>
+ <li>Den russiske revolusjonen 1891–1924 — Orlando Figes.</li>
+ <li>Tyskland søker sin plass i Europa 1864–1945 — Fritz Fischer.</li>
+ <li>Yalta-ordenen 1945–1991 — Sovjetiske grenser som resultat av militære seire.</li>
+ <li>Russland kriger for sin plass i Europa; grenser som konsekvens av politisk sammenbrudd, tapte «Den kalde krigen», imperiet i oppløsning 1991.</li>
+ <li class="hi">Vi lever kanskje i «Restaurasjonen av det russiske imperiet» — nyttårsaften 1999 – ??</li></ul>`,
+ crit:`<p>Datovalget er presist: <strong>31. desember 1999</strong> var dagen Jeltsin trakk seg og Putin overtok. Ukraina-krigen leses som siste kapittel i en 25-årig restaurasjonsbue.</p>
+ <p>Periodiseringene er korrekte (Figes' verk har nettopp undertittel 1891–1924). Restaurasjonstesen har solid støtte i Putins egne uttalelser og mønsteret Tsjetsjenia→Georgia 2008→Krim 2014→2022.</p>
+ <p>Forbehold: «lange linjer»-metoden kan skape en <strong>illusjon av determinisme</strong> — at utfallet var uunngåelig. Fischer-tesen er nettopp et eksempel på en slik tolkning som har vært heftig faglig omstridt.</p>`},
+
+{tag:'Del 2 · Globale teatre', num:'07', title:'Et endret USA — den forsømmelige gjeteren',
+ source:`<p><em>Politisk karikatur:</em> Uncle Sam (USA) som sovende/beruset gjeter med tomme flasker, mens en ulv herjer flokken.</p>
+ <ul><li>«Dette lammet heter trolig Europa … men kunne like gjerne hett Japan, Sør-Korea, Taiwan eller Australia.»</li>
+ <li>«Vi er maksimalt uheldig med Trump-administrasjonen i USA i forhold til Russland og krigen mot Ukraina og Europa.»</li>
+ <li class="hi">«En annen ledelse kunne gitt Putin langt trangere rammer for føring av krigen.»</li></ul>`,
+ crit:`<p>Det mest <strong>eksplisitt verdiladede</strong> slidet: USA under Trump som en abdisert beskytter, allierte (lammene) overlatt til ulven (Russland).</p>
+ <p>«En annen ledelse kunne gitt Putin trangere rammer» er <strong>kontrafaktisk</strong> — et forsvarlig resonnement, men per definisjon ikke beviselig. «Vi har litt denne følelsen, ikke sant??» appellerer til delt fornemmelse, ikke dokumentasjon.</p>`,
+ fc:[{v:'val',claim:'At Vesten er «maksimalt uheldig» med Trump-administrasjonen',find:'Politisk vurdering, ikke konstaterbar kjensgjerning. Tilhengere ville hevdet at administrasjonen har en annen, men prinsipiell linje (rask våpenhvile, «realisme» om territorier, amerikansk egeninteresse). Selve omleggingen av USAs Russland/Ukraina-linje er reell; verdivurderingen av den er omstridt.'}]},
+
+{tag:'Del 2 · Globale teatre', num:'08', title:'USA – Iran: å avslutte kriger',
+ source:`<div class="q">«Alle kan begynne en krig når de vil, men ikke alle kan trekke seg ut når de måtte ønske det.»<cite>Machiavelli</cite></div>
+ <ul><li>Siden USA startet krigen med maksimalistiske mål, kan den nesten bare avsluttes ved iransk full kapitulasjon.</li>
+ <li>Utfallet må styrke Trump foran mellomvalgene og bekrefte USA som verdens fremste militærmakt.</li>
+ <li class="hi">Uten kontroll på ca. 400 kg anriket uran og uten å hindre iransk kontroll over Hormuz, ville det være et voldsomt strategisk nederlag.</li>
+ <li class="hi">Dette peker mot eskalering — bakkestyrker, men…</li></ul>`,
+ crit:`<p>En logisk «felle»-analyse: maksimalistiske mål + behov for politisk seier + ingen ansiktsbevarende exit → <strong>eskaleringspress</strong>. Resonnementsstrukturen er solid uavhengig av faktadetaljene.</p>
+ <p>Premisset «siden USA startet krigen» er en ansvarstilskrivning som er sentral for hele resonnementet — verdt å være bevisst, ikke ta for gitt.</p>`,
+ fc:[{v:'ok',claim:'«Omtrent 400 kilo anriket uran»',find:'Bekreftet i størrelsesorden. IAEA anslo 440,9 kg uran anriket til 60 % før angrepene; etter angrepene er beholdningens nøyaktige plassering usikker (trolig i tunnelkompleks ved Isfahan, ifølge IAEA-sjef Grossi). «Ca. 400 kg» er en vanlig avrunding. <span class="srcref">Kilder: IAEA via Arms Control Center, Bulletin of the Atomic Scientists, The National</span>'}]},
+
+{tag:'Del 2 · Globale teatre', num:'09', title:'Utviklingen i Asia og Sør-Kinahavet',
+ source:`<p><em>Kart over «ni-strek-linjen»:</em> Kinas territorialkrav som buer ned langs Vietnam og omslutter nesten hele Sør-Kinahavet — berører Taiwan, Filippinene, Malaysia, Brunei og Indonesia.</p>
+ <ul><li>FNs havrettskonvensjon: 200 nautiske mils økonomisk sone.</li>
+ <li>Omstridte øyer i to klynger: Paracel (nord) og Spratly (sør).</li>
+ <li>«The Nine Dash Line viser hvordan Kinas totalt ubegrunnede krav berører en rekke land i Asia.»</li></ul>`,
+ crit:`<p>Mindre verdiladet enn USA-slidene: her er Dalhaugs vurdering på linje med både folkeretten og vestlig konsensus. Kina veves inn i den større fortellingen — Sør-Kinahavet, Ukraina og Midtøsten som uttrykk for samme grunnfenomen: en regelbasert orden som forvitrer til fordel for makt.</p>`,
+ fc:[{v:'ok',claim:'«Totalt ubegrunnede krav»',find:'Bekreftet i juridisk forstand. Permanent Court of Arbitration i Haag avgjorde i 2016 (Filippinene mot Kina) at ni-strek-linjen mangler folkerettslig grunnlag etter UNCLOS. Kina avviste avgjørelsen. Den verdiladede ordbruken er altså rettslig forankret. <span class="srcref">Etablert folkerett (PCA 2016)</span>'},
+ {v:'nu',claim:'«Ni-strek-linjen»',find:'Korrekt og vanligst brukt. Etter at Kina i 2023 publiserte et kart med en tiende strek, omtales den i dag også som «ti-strek-linjen». Detalj, ikke feil.'}]},
+
+{tag:'Del 2 · Globale teatre', num:'10', title:'Hormuz som mal for Kina i Taiwan',
+ source:`<div class="headline-card"><div class="src">Financial Times · 01.04.2026</div><div class="hl">Shutting Hormuz is a template for China in Taiwan</div><div class="dek">Beijing vil søke å kopiere Teherans spilleregler i Taiwan-stredet — og de globale økonomiske konsekvensene kan bli enda verre. <em>(av Eyck Freymann)</em></div></div>
+ <p>Det avgjørende bindeleddet: hendelsene i Hormuz blir presedens og læringsmodell for Kinas mulige fremferd mot Taiwan. Howard-premisset realiseres helt eksplisitt.</p>`,
+ crit:`<p>Sirkelen sluttes fra åpningen: en krig langt borte (Iran) skaper presedens for neste storkonflikt (Taiwan).</p>
+ <p>Den underliggende tesen — at en stredet-blokade i Hormuz kan tjene som modell for kinesisk press mot Taiwan — er <strong>seriøst diskutert</strong> i sikkerhetsmiljøer uavhengig av artikkelen: begge er kritiske maritime flaskehalser, og «gråsone»-press har vært sentralt i Taiwan-scenarioer i årevis.</p>`,
+ fc:[{v:'val',claim:'FT-artikkelen av Eyck Freymann (01.04.2026)',find:'Selve artikkelens innhold er ikke verifisert her, men Freymann er en reell Kina/Taiwan-analytiker (bl.a. Hoover Institution), så en slik signatur er plausibel. Choke point-analogien står seg som etablert analyse uansett.'}]},
+
+{tag:'Del 2 · Globale teatre', num:'11', title:'NATO — et strategisk «oppstykket» Europa',
+ source:`<p><em>Kart:</em> Europa med vestlig-orienterte land markert; rød pil mot Norden fra øst (trusselretning).</p>
+ <div class="headline-card"><div class="src">Dagens Næringsliv · 29.01.2026</div><div class="hl">Natos spydspiss</div><div class="dek">«Det Nord-Atlantiske Forsvarsforbund har det som skal til.»</div></div>`,
+ crit:`<p>Uavklart retorisk tone: tittelen «har det som skal til» kan være oppriktig <em>eller</em> ironisk kontrast til Dalhaugs eget poeng om et «oppstykket» Europa. Hva han sa muntlig avgjør tolkningen.</p>
+ <p>Kartdetalj: hvis blåfargen skal forestille NATO, er det <strong>misvisende at Ukraina er farget</strong> (Ukraina er ikke NATO-medlem — det er kjernen i konflikten). Trolig viser kartet EU eller «vestlig-orienterte» land i bred forstand.</p>`},
+
+{tag:'Del 2 · Globale teatre', num:'12', title:'«Europeisk» NATO — uten USA',
+ source:`<div class="headline-card"><div class="src">The Wall Street Journal · 14.04.2026</div><div class="hl">Europe Is Accelerating a NATO Fallback Plan in Case Trump Pulls Out</div><div class="dek">Kontinentet utarbeider en beredskapsplan for større europeisk engasjement etter hvert som spenningen rundt Iran-krigen øker. <em>(Pancevski &amp; Michaels)</em></div></div>
+ <p>Sjekkliste for en europeisk NATO:</p>
+ <ul><li>Bruke NATOs militære struktur uten USA.</li>
+ <li>Flere europeiske offiserer i kommandostrukturen.</li>
+ <li>Fortsatt avskrekke Russland.</li>
+ <li class="hi">Fortsatt gjennomføre omfattende militære operasjoner.</li>
+ <li class="hi">Fortsatt kjernefysisk avskrekking.</li></ul>`,
+ crit:`<p>Fra diagnose (USA svikter) til praktiske konsekvenser (kan Europa stå alene?). Listen er en <strong>fagmessig korrekt</strong> identifisering av kapabilitetsgapene.</p>
+ <p>Kjernefysisk avskrekking er det vanskeligste: bare Frankrike og Storbritannia har egne atomvåpen i Europa, og disse arsenalene er langt mindre enn USAs. Europeisk avhengighet av amerikanske «enablers» (transport, etterretning, luftvern, satellitt) er den store svakheten.</p>
+ <p>«NAFF» er uavklart — trolig en betegnelse på en europeisk forsvarsstruktur.</p>`,
+ fc:[{v:'val',claim:'WSJ-oppslag om europeisk NATO-reserveplan',find:'Ikke verifisert ord for ord her, men Pancevski og Michaels er reelle WSJ-journalister på europeisk sikkerhet/NATO, og «europeisk strategisk autonomi» er en høyaktuell, veldokumentert debatt. Substansen er solid.'}]},
+
+{tag:'Del 3 · Ukraina', num:'13', title:'Russlands krig mot Ukraina — situasjonsbildet',
+ source:`<p><em>Kart:</em> Russisk-kontrollerte områder i et belte i øst og sør; Krim merket «illegally annexed by Russia in 2014».</p>
+ <div class="statline"><div class="stat"><b>~20%</b><small>av Ukrainas territorium okkupert</small></div>
+ <div class="stat"><b>~1 000 km</b><small>frontlinje</small></div></div>
+ <p>«Det rosa feltet viser overordnet hva det er snakk om — knappe 20 % av Ukrainas totale territorium, en frontlinje på ca. 1 000 km.»</p>`,
+ crit:`<p>Tittelen «Ukrainas frihetskamp» signaliserer et tydelig normativt standpunkt — Ukraina som angrepet part, Russland som aggressor. Folkerettslig udiskutabelt om hvem som annekterte og angrep.</p>
+ <p>«Knapt 20 %» kan virke beskjedent, men <strong>tilslører den strategiske verdien</strong>: de okkuperte områdene omfatter Donbas' industri, jordbruksland og landbroen til Krim.</p>`,
+ fc:[{v:'ok',claim:'«Knapt 20 % okkupert, ~1 000 km front»',find:'Bekreftet. Russland kontrollerer ca. 18–20 % av Ukraina (inkl. Krim) — areal på linje med delstaten Pennsylvania — og fronten er ca. 1 000 km lang. Stemmer med ISW-baserte oppgjør per våren 2026. <span class="srcref">Kilder: ISW/Russia Matters, CFR Global Conflict Tracker, Al Jazeera</span>'},
+ {v:'ok',claim:'Krim «ulovlig annektert 2014»',find:'Bekreftet. Annekteringen er fordømt av FNs generalforsamling og anerkjennes ikke av de fleste stater.'}]},
+
+{tag:'Del 3 · Ukraina', num:'14', title:'Det okkuperte arealet — eksemplifisert',
+ source:`<p>For å gjøre «knapt 20 %» konkret sammenlignes arealet med kjente land:</p>
+ <ul><li>En stor del av <strong>Sør-Norge</strong> (rødt felt fra Oslo og nord/vestover).</li>
+ <li><strong>Sveits + Østerrike</strong> til sammen — merket «≈ 101 %».</li>
+ <li>Et omriss tilsvarende <strong>Nord-/Midt-Italia</strong>: «Total area: 123 672 km²».</li></ul>`,
+ crit:`<p>Et velkjent og effektivt visualiseringsgrep. Tallene er <strong>internt konsistente</strong>: 123 672 km² ≈ 20,5 % av Ukrainas areal (603 500 km²), og ≈ summen av Sveits (41 285) + Østerrike (83 879) = 125 164 km² → «≈ 101 %» stemmer.</p>
+ <p>Eneste fallgruve: Italia-kartet. Italia er ~301 000 km² — langt større. Omrisset dekker derfor bare deler av landet. Husk: <strong>«som Nord-Italia», ikke «som hele Italia».</strong></p>`,
+ fc:[{v:'ok',claim:'Areal ≈ Sveits + Østerrike',find:'Bekreftet aritmetisk. ~124 000 km² okkupert ≈ 99–101 % av Sveits + Østerrike. Konsistent med okkupasjonsanslaget.'}]},
+
+{tag:'Del 3 · Ukraina', num:'15', title:'Russisk tilbakegang — det andre bildet',
+ source:`<p><em>To kart (det høyre fra ISW / Critical Threats):</em></p>
+ <ul><li>Russisk tilbakegang siden ca. 21. mars 2022 (gule områder: Kyiv, Tsjernihiv, Sumy, Kharkiv, deler av Kherson).</li>
+ <li class="hi">Totalt tap av ca. 54 % av de opprinnelig okkuperte områder — vesentlig større landareal enn Danmark frigjort fra Russland.</li>
+ <li>De skraverte områdene var okkupert fra 2014: bare litt over 50 % av det Moskva sitter på i dag er tatt som følge av «storkrigen».</li></ul>`,
+ crit:`<p>Et bevisst mottrekk mot fortellingen om russisk fremmarsj: nettoresultatet er at Russland sitter igjen med langt mindre enn på toppen, og at <strong>utbyttet av selve invasjonen er territorielt magert</strong>. Tallene er retningsmessig riktige, men 50/50-fordelingen bør behandles med forsiktighet (se faktasjekk).</p>`,
+ fc:[{v:'ok',claim:'~54 % av opprinnelig okkupert tatt tilbake',find:'Bekreftet som fenomen, målt mot 2022-invasjonens makspunkt. Russland nådde ~27 % av Ukraina i mars 2022; Ukraina gjenerobret anslagsvis 54 000–74 000 km² (Kyiv/Tsjernihiv/Sumy april 2022, Kharkiv sept. 2022, Kherson vestbredd nov. 2022). <span class="srcref">Kilder: ISW via Al Jazeera, Ukraine War Analytics</span>'},
+ {v:'nu',claim:'«Bare litt over 50 % tatt i storkrigen»',find:'Nyansert / trolig noe lavt. 2014-arven (Krim ~27 000 km² + Donbas ~16 000) utgjør ~35–40 % av dagens ~115 000 km². Storkrig-gevinsten er derfor snarere ~60 % enn «litt over 50 %». Hovedpoenget (mye stammer fra 2014) står seg; den eksakte fordelingen bør etterprøves. <span class="srcref">Egen beregning fra ISW-baserte arealtall</span>'}]},
+
+{tag:'Del 3 · Ukraina', num:'16', title:'Russland — verden sett fra Kreml',
+ source:`<ul><li>Mye større ressurser enn Ukraina, men makter ikke omsette dette i strategisk fremgang — krigføringen er langt fra optimal.</li>
+ <li>Fremgangen på bakken nærmest stoppet; enorme tap av mennesker og materiell.</li>
+ <li>Krigen har nådd den jevne russer via ukrainske dypangrep.</li>
+ <li>Stadig vanskeligere å rekruttere soldater.</li>
+ <li>Krigen finansieres med tyngende skatter; økende sosial uro.</li>
+ <li class="hi">Stadig mer avhengig av Kina.</li>
+ <li class="hi">«På plussiden»: evnen til å angripe sivile/infrastruktur — og «selvsagt Donald Trump».</li></ul>`,
+ crit:`<p>Et regnskap klart vinklet mot russisk svakhet. Det siste punktet er sarkastisk og kobler tilbake til USA-kritikken.</p>
+ <p>Balansemerknad: et nøytralt «sett fra Kreml»-regnskap kunne vektlagt russiske fortrinn Dalhaug nedtoner — at de har holdt og utvidet 2014-posisjonene, omstilt økonomien til krigsproduksjon, absorbert tap og sanksjoner, og at <strong>tiden i noen henseender kan spille for dem</strong> (utmatting av ukrainsk personell og vestlig støttevilje).</p>`,
+ fc:[{v:'ok',claim:'Russisk underprestasjon / dypangrep / Kina-avhengighet',find:'Bekreftet som veletablerte trekk: misforholdet ressurser/prestasjon, ukrainske dypangrep mot russiske raffinerier og baser, rekrutteringspress og voksende avhengighet av Kina. <span class="srcref">Bredt dokumentert i militæranalyse 2024–2026</span>'},
+ {v:'un',claim:'«Fremgangen nærmest stoppet opp» (per apr. 2026)',find:'Usikkert/dynamisk. ISW-data for mars–april 2026 viser små svingninger begge veier. Fronten i hovedsak fastlåst med marginale endringer — «nærmest stoppet» er forsvarlig, men ikke en stabil tilstand. <span class="srcref">Kilde: ISW/Russia Matters Report Card, apr. 2026</span>'}]},
+
+{tag:'Del 3 · Ukraina', num:'17', title:'Ukraina — verden sett fra Kyiv',
+ source:`<ul><li>Holder militært stand, utvikler ny teknologi, påfører Russland store tap (også på russisk jord), har gjennomført lokale offensiver.</li>
+ <li>Omfattende avtaler med europeiske land om våpenproduksjon; mye droner lages i Europa.</li>
+ <li>Valget i Ungarn på plussiden; valget i Bulgaria en nedside.</li>
+ <li>Støtten fra flere europeiske land fremstår solid.</li>
+ <li class="hi">Mer sårbar for russiske missilangrep · Mangler soldater · Økonomisk avhengig av støtte utenfra.</li></ul>
+ <div class="q">«God strategi kjennetegnes ved at man oppnår mer enn den initiale situasjonen og tilgangen på ressurser skulle tilsi.»<cite>Lawrence Freedman</cite></div>`,
+ crit:`<p>Freedman-sitatet er «dommen» over de to balanseslidene: målt i <strong>strategisk effektivitet</strong>, ikke rå ressurser, fører Ukraina den dyktigste krigen.</p>
+ <p>Forbehold: «god strategi» garanterer ikke seier. Russland kan føre dårlig strategi og likevel vinne på utmattelse hvis massen og tiden er stor nok. Ukrainas <strong>soldatmangel</strong> regnes av mange som potensielt avgjørende, ikke bare en håndterbar ulempe.</p>`,
+ fc:[{v:'ok',claim:'«Valget i Ungarn på plussiden»',find:'Bekreftet. Ved valget 12.04.2026 vant Péter Magyars Tisza-parti to tredjedels supermajoritet og felte Viktor Orbán etter 16 år. Orbán var EUs mest Russland-vennlige leder — klart «på plussiden» for Ukraina. <span class="srcref">Kilder: CNN, Al Jazeera, Reuters</span>'},
+ {v:'ok',claim:'«Valget i Bulgaria en nedside»',find:'Bekreftet. Ved valget 19.04.2026 — dagen før foredraget — vant den pro-russiske eks-presidenten Rumen Radevs parti et jordskred (~45 %). Radev motsatte seg en forsvarspakt med Ukraina og vil gjenoppta russisk energiimport. <span class="srcref">Kilder: CNN, Al Jazeera, Wikipedia</span>'},
+ {v:'val',claim:'Lawrence Freedman-sitatet',find:'Freedman er en reell og sentral strategiteoretiker (King’s College London). Formuleringen fanger en kjerneidé hos ham; eksakt ordlyd/kilde ikke verifisert fra slidet.'}]},
+
+{tag:'Del 3 · Ukraina', num:'18', title:'Trumps tilnærming til Ukraina',
+ source:`<div class="q">«USA har ingen prinsipiell tilnærming til hvordan krigen bør avsluttes, ingen tanker om en rettferdig fred for Ukraina, eller en fredsslutning som styrker internasjonal lov og rett — en avslutning som advarer Russland og andre mot nye krigseventyr.»</div>`,
+ crit:`<p>Den eksplisitte sammenfatningen av USA-kritikken: ingen verdiforankret fredsidé, ingen hensyn til en rettferdig fred, og — strategisk viktigst — ingen <strong>presedens</strong> som avskrekker fremtidig aggresjon (koblingen til Kina/Taiwan).</p>
+ <p>Det <strong>analytisk solide</strong>, uavhengig av politisk ståsted, er presedens-poenget: hvordan en krig avsluttes signaliserer til andre hva aggresjon «koster» (jf. München 1938).</p>`,
+ fc:[{v:'val',claim:'«USA har ingen prinsipiell tilnærming»',find:'Normativt standpunkt, ikke empirisk konstatering. Det forutsetter én bestemt målestokk (folkerett, rettferdig fred, avskrekking). Motstandere ville hevdet at administrasjonen nettopp har en prinsipiell — men annen — tilnærming. Administrasjonens konkrete Ukraina-politikk per apr. 2026 bør verifiseres separat.'}]},
+
+{tag:'Del 3 · Ukraina', num:'19', title:'«Frykten for freden» (I) — to mulige utfall',
+ source:`<p>Gitt at Russland er aggressoren med de mest maksimalistiske kravene, kan krigen i prinsippet bare ende på to måter:</p>
+ <ul><li><strong>1.</strong> Russland vinner; Ukraina opphører som suveren stat — absorberes eller blir et lydrike som Belarus.</li>
+ <li><strong>2.</strong> Kreml modererer i betydelig grad sine mål og aksepterer at størstedelen av Ukraina styres fra Kyiv og forblir suveren — et kompromiss Ukraina og Europa kan leve med.</li>
+ <li class="hi">Forutsetning for alt. 2: situasjonen måtte fremstå så alvorlig at et klart flertall av russiske beslutningstakere oppfatter videre krig som fånyttes — mer å vinne enn å tape på å forhandle seg ut.</li></ul>`,
+ crit:`<p>Forutsetningen for alt. 2 er kjernen: en holdbar fred krever at Russland selv erkjenner at krigen ikke kan vinnes — ellers blir freden bare en pause. Dette er forskningens «<strong>mutually hurting stalemate</strong>» (Zartman).</p>
+ <p>Forbehold: dikotomien er forenklet. I praksis finnes mellomformer — frossen konflikt (Korea siden 1953), langvarig våpenhvile langs fronten, delvis kompromiss om territorium/NATO.</p>`},
+
+{tag:'Del 3 · Ukraina', num:'20', title:'«Frykten for freden» (II) — hvorfor Russland er låst',
+ source:`<p><em>Sett fra Kreml er bare seier akseptabelt, av flere grunner:</em></p>
+ <ul><li>Bare en omfattende seier kan «ufarliggjøre freden»; det må ikke oppstå tvil om at Russland vant.</li>
+ <li>Nødvendig for å vedlikeholde persepsjonen av Russland som global stormakt.</li>
+ <li>Må leve opp til «den storslåtte historie» — en fortsettelse av «Den store fedrelandskrigen» og «seieren over fascismen».</li>
+ <li>For befolkningen er noe annet enn total seier «utenkelig».</li>
+ <li>Sikkerhetsgarantier til Ukraina = vestlig rolle = «Russland tapte krigen! Drømmen om imperiet dør!»</li>
+ <li class="hi">Ingen russisk leder vil avslutte krigen slik at ~1 million traumatiserte soldater kommer hjem i skam med vissheten om at de tapte.</li></ul>`,
+ crit:`<p>Foredragets sterkeste sammenhengende analyse. Premissene (koblingen til «fedrelandskrigen», sikkerhetsgarantier som russisk nederlag) er godt forankret.</p>
+ <p>Forbehold: en <strong>deterministisk</strong> lesning. Autoritære regimer kan «selge» kompromiss som seier via informasjonskontroll (Sovjet trakk seg ut av Afghanistan 1989 uten å kollapse). Konklusjonen (kompromiss nær umulig) er sterkere enn premissene strengt tatt bærer.</p>`,
+ fc:[{v:'un',claim:'«Rundt én million» russiske soldater',find:'Usikkert. Tallet ligger i øvre sjikt av omstridte vestlige anslag for samlede russiske tap (drepte + sårede) og bør behandles varsomt og kildehenvises. <span class="srcref">Vestlige etterretnings-/forsvarsanslag</span>'},
+ {v:'ok',claim:'Koblingen til «Den store fedrelandskrigen»',find:'Bekreftet som premiss. «Avnazifisering» og parallellen til seieren over fascismen er sentrale i Putin-regimets krigsretorikk og legitimering. <span class="srcref">Veldokumentert</span>'}]},
+
+{tag:'Del 4 · Konklusjon', num:'21', title:'Avsluttende strategiske betraktninger',
+ source:`<ul><li>Historisk har «vi alle» hatt liten evne til å forutse hvordan kriger startes, utvikler seg og avsluttes.</li>
+ <li>Alt man tar for gitt som varig, gjennomløper endringer — og faller ofte helt bort.</li>
+ <li class="hi">Det er fortsatt mulig å påføre Russland et strategisk nederlag i Ukraina — noe som kan gi økt trygghet i Europa i flere tiår.</li>
+ <li class="hi">Et omfattende russisk tap ville generelt redusere krigsfaren også andre steder og styrke respekten for folkeretten.</li></ul>`,
+ crit:`<p>Sirkelen lukkes mot Howard-premisset: fordi alt henger sammen, får utfallet i Ukraina konsekvenser langt utover Ukraina (advarer også Kina/Taiwan).</p>
+ <p>De to første punktene er solid visdom — en sunn motvekt mot skråsikkerhet. De to gule er <strong>normative/kontrafaktiske</strong>: «mulig å påføre Russland nederlag» er en vurdering i viss spenning med «Frykten for freden»-analysen (som hevdet at Russland er låst til seier).</p>
+ <p>Ikke berørt: at et desperat, kjernevåpenbevæpnet Russland presset mot fullt nederlag kan bli <em>farligere</em> (eskaleringsrisiko).</p>`,
+ fc:[{v:'val',claim:'«Russisk nederlag reduserer krigsfaren globalt»',find:'Presedens-hypotese — logisk plausibel og bredt akseptert, men per natur ikke beviselig. En fullstendig analyse ville veid nedsiden (eskaleringsrisiko) mot oppsiden (avskrekking).'}]},
+
+{type:'dash', nav:'Faktasjekk-dashbord'},
+{type:'sources', nav:'Kilder & metode'}
+];
+
+/* dashboard + sources data */
+const dashCards=[
+['ok','Krigen USA/Israel–Iran','Bekreftet. Angrep startet 28.02.2026; Khamenei drept; våpenhvile 7.–8. april, deretter Hormuz-spenning.','Britannica, House of Commons Library'],
+['ok','Pavens «håndfull tyranner»','Bekreftet. Tale i Bamenda, Kamerun, 16.04.2026 — under offentlig strid med Trump og motstand mot Iran-krigen.','Washington Post, NPR, France 24'],
+['ok','~400 kg anriket uran','Bekreftet i størrelsesorden. IAEA: 440,9 kg 60 %-uran før angrepene; plassering nå usikker (trolig Isfahan).','IAEA via Arms Control Center, Bulletin of Atomic Scientists'],
+['ok','Ni-strek-linjen «ubegrunnet»','Bekreftet rettslig. PCA Haag avgjorde i 2016 at kravet mangler folkerettslig grunnlag.','PCA 2016'],
+['ok','~20 % okkupert, ~1 000 km front','Bekreftet. ISW-baserte oppgjør per våren 2026; areal ≈ Pennsylvania.','ISW/Russia Matters, CFR, Al Jazeera'],
+['ok','Valget i Ungarn (plussiden)','Bekreftet. Magyar/Tisza vant supermajoritet 12.04.2026; Orbán felt etter 16 år.','CNN, Al Jazeera, Reuters'],
+['ok','Valget i Bulgaria (nedside)','Bekreftet. Pro-russiske Radev vant jordskred 19.04.2026 — dagen før foredraget.','CNN, Al Jazeera'],
+['nu','~54 % av okkupasjon gjenerobret','Riktig retning, målt mot 2022-toppen (~27 %). Anslag 54 000–74 000 km² frigjort.','ISW via Al Jazeera'],
+['nu','«Litt over 50 % tatt i storkrigen»','Trolig noe lavt — egen beregning peker mot ~60 %. Hovedpoenget (mye fra 2014) står seg.','Egen beregning, ISW-tall'],
+['un','«Fremgang nærmest stoppet» (apr. 2026)','Dynamisk. Små svingninger begge veier; fronten i hovedsak fastlåst, men ikke stabil.','ISW/Russia Matters apr. 2026'],
+['un','«Rundt én million» russiske soldater','Øvre sjikt av omstridte tapsanslag (drepte+sårede). Behandles varsomt.','Vestlige etterretningsanslag'],
+['val','USA «ingen prinsipiell tilnærming»','Normativ vurdering, ikke fakta. Avhenger av målestokk; motstandere bestrider premisset.','—'],
+['val','«Russisk nederlag → mindre krig globalt»','Presedens-hypotese: plausibel, men ikke beviselig. Eskaleringsrisiko ikke veid inn.','—']
+];
+const srcs=[
+['Britannica','«2026 Iran war» — kronologi, Hormuz-forstyrrelser, Operation Epic Fury.'],
+['House of Commons Library','«Israel/US-Iran conflict 2026» — angrep 28.02, våpenhvile 8. april.'],
+['Washington Post / NPR / France 24 / PBS','Pave Leo XIV, tale i Bamenda, Kamerun, 16.04.2026.'],
+['IAEA (via Arms Control Center)','440,9 kg 60 %-anriket uran før angrepene; Grossi om Isfahan.'],
+['Bulletin of the Atomic Scientists','Analyse av uranbeholdningens mulige flytting til Isfahan.'],
+['CNN / Al Jazeera / Reuters','Ungarn-valget 12.04.2026 — Magyar/Tisza supermajoritet.'],
+['CNN / Al Jazeera / Wikipedia','Bulgaria-valget 19.04.2026 — Radev (pro-russisk) jordskred.'],
+['ISW / Russia Matters','«Report Card» apr. 2026 — ~20 % okkupert, frontbevegelser.'],
+['CFR Global Conflict Tracker','Fireårsstatus: ~20 % okkupert, ~1 000 km front.'],
+['Permanent Court of Arbitration','2016-avgjørelse: ni-strek-linjen uten folkerettslig grunnlag.']
+];
+
+/* ---------- render ---------- */
+function fcBlock(fc){
+  if(!fc||!fc.length) return '';
+  const items=fc.map(f=>`<div class="fc-item">${V[f.v]}<div class="fc-claim">«${f.claim}»</div><div class="fc-find">${f.find}</div></div>`).join('');
+  return `<div class="fc"><div class="fc-head">▣ Faktasjekk — ferske påstander</div>${items}</div>`;
+}
+const main=document.getElementById('main');
+const tocList=document.getElementById('tocList');
+let cnum=0, html='', toc='';
+let lastPart='';
+
+sections.forEach((s,i)=>{
+  const id='s'+i;
+  if(s.type==='hero'){
+    html+=`<section class="hero chap" id="top" data-nav="Forside">
+      <svg class="megastar" viewBox="0 0 24 24" fill="none"><g stroke="currentColor" stroke-width="1"><line x1="12" y1="1" x2="12" y2="23"/><line x1="1" y1="12" x2="23" y2="12"/><line x1="4" y1="4" x2="20" y2="20"/><line x1="20" y1="4" x2="4" y2="20"/><line x1="12" y1="2" x2="16" y2="10"/><line x1="12" y1="22" x2="8" y2="14"/><line x1="2" y1="12" x2="10" y2="8"/><line x1="22" y1="12" x2="14" y2="16"/></g></svg>
+      <div class="eyebrow">Strategisk gjennomgang · Kritiske merknader &amp; faktasjekk</div>
+      <h1>Den strategiske situasjonen i Ukraina <em>etter den femte krigsvinteren</em></h1>
+      <div class="meta">Foredrag av <b>generalløytnant (P) Arne Bård Dalhaug</b> — seniorrådgiver i Den Norske Atlanterhavskomité og president i Norges Forsvarsforening. Holdt i <b>Oslo Militære Samfund 20. april 2026</b>.<br><br>Dette dokumentet gjengir alt innhold fra presentasjonen, med <b>kritiske merknader</b> til argumentasjonen og en <b>faktasjekk</b> av de ferske påstandene mot oppdaterte kilder.</div>
+      <div class="scrollcue"><span class="arr">↓</span> Bla for å lese · bruk menyen til venstre for å hoppe</div>
+    </section>`;
+    toc+=`<a href="#top" data-target="top">Forside</a>`;
+    return;
+  }
+  if(s.type==='agenda'){
+    const rows=[['1','Sir Michael Howard setter scenen'],['2','«Great man theory» og global usikkerhet'],['3','Historiske betraktninger'],['4','Et endret USA — geopolitikk'],['5','Asia og Sør-Kinahavet'],['6','NATO — et «oppstykket» Europa'],['7','Russlands krig mot Ukraina',true],['8','Avsluttende betraktninger',true]];
+    html+=`<section class="chap" id="${id}" data-nav="Disposisjon">
+      <div class="kicker"><span class="tag">Disposisjon</span><span class="num">Hovedpunkter</span><span class="rule"></span></div>
+      <h2 class="title">Foredragets oppbygning</h2>
+      <p class="subtitle">Top-down: globalt rammeverk → regionale teatre → konflikt → konklusjon</p>
+      <div class="agenda">${rows.map(r=>`<div class="row ${r[2]?'key':''}"><span class="n">${r[0]}</span><span class="t">${r[1]}</span></div>`).join('')}</div>
+    </section>`;
+    toc+=`<a href="#${id}" data-target="${id}">Disposisjon</a>`;
+    return;
+  }
+  if(s.type==='dash'){
+    html+=`<section class="chap" id="${id}" data-nav="Faktasjekk-dashbord">
+      <div class="kicker"><span class="tag">Faktasjekk</span><span class="num">Samlet oversikt</span><span class="rule"></span></div>
+      <h2 class="title">Faktasjekk-dashbord</h2>
+      <p class="subtitle">De ferske påstandene (etter jan. 2026) verifisert mot oppdaterte kilder — fargekodet etter konklusjon</p>
+      <div class="dash">${dashCards.map(c=>`<div class="dcard">${V[c[0]]}<h5>${c[1]}</h5><p>${c[2]}</p><span class="srcref">${c[3]}</span></div>`).join('')}</div>
+    </section>`;
+    toc+=`<a href="#${id}" data-target="${id}" class="">Faktasjekk-dashbord</a>`;
+    return;
+  }
+  if(s.type==='sources'){
+    html+=`<section class="chap" id="${id}" data-nav="Kilder & metode">
+      <div class="kicker"><span class="tag">Kilder &amp; metode</span><span class="num">Etterprøvbarhet</span><span class="rule"></span></div>
+      <h2 class="title">Kilder og metodisk forbehold</h2>
+      <div class="srclist">${srcs.map(x=>`<div class="s"><b>${x[0]}</b> — ${x[1]}</div>`).join('')}</div>
+      <div class="method"><b>Metode:</b> Foredraget ble holdt 20.04.2026. Påstander om hendelser etter januar 2026 (Iran-krigen, pavens tale, valgene i Ungarn/Bulgaria, uranbeholdning, frontstatus) er kontrollert mot oppdaterte nyhets- og fagkilder. «Bekreftet» = samsvar med flere uavhengige kilder; «Nyansert» = hovedpoenget holder, men tall/detaljer avviker; «Usikkert» = grunnlaget er omstridt eller dynamisk; «Vurdering» = påstanden er normativ/kontrafaktisk og kan ikke faktasjekkes. <b>Sitater fra tenkere</b> (Howard, Gramsci, Freedman m.fl.) er ikke verifisert ord for ord mot primærkilde.</div>
+    </section>`;
+    toc+=`<a href="#${id}" data-target="${id}">Kilder &amp; metode</a>`;
+    return;
+  }
+  /* content section */
+  cnum++;
+  const part=s.tag.split(' · ')[0];
+  if(part!==lastPart){ toc+=`<div class="part">${s.tag.split(' · ')[1]||s.tag}</div>`; lastPart=part; }
+  html+=`<section class="chap" id="${id}" data-nav="${s.num} · ${s.title}">
+    <div class="kicker"><span class="tag">${s.tag}</span><span class="num">Punkt ${s.num}</span><span class="rule"></span></div>
+    <h2 class="title">${s.title}</h2>
+    <div class="grid2">
+      <div class="block"><div class="panel-label">På sliden</div><div class="source">${s.source}</div></div>
+      <div class="block"><div class="panel-label">Kritisk lesning &amp; faktasjekk</div><div class="note crit"><h4>◈ Kritisk merknad</h4>${s.crit}</div>${fcBlock(s.fc)}</div>
+    </div>
+  </section>`;
+  toc+=`<a href="#${id}" data-target="${id}"><span class="tnum">${s.num}</span>${s.title}</a>`;
+});
+main.innerHTML=html;
+tocList.innerHTML=toc;
+
+/* progress bar */
+const prog=document.getElementById('progress');
+const totop=document.getElementById('totop');
+const here=document.getElementById('hereLabel');
+function onScroll(){
+  const h=document.documentElement;
+  const max=h.scrollHeight-h.clientHeight;
+  const p=max>0?(h.scrollTop/max)*100:0;
+  prog.style.width=p+'%';
+  totop.classList.toggle('show', h.scrollTop>600);
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+
+/* scrollspy */
+const links=[...tocList.querySelectorAll('a')];
+const linkFor={}; links.forEach(a=>linkFor[a.dataset.target]=a);
+const chaps=[...document.querySelectorAll('.chap')];
+const spy=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const id=e.target.id;
+      links.forEach(a=>a.classList.remove('active'));
+      if(linkFor[id]) linkFor[id].classList.add('active');
+      here.textContent=e.target.getAttribute('data-nav')||'';
+    }
+  });
+},{rootMargin:'-45% 0px -50% 0px',threshold:0});
+chaps.forEach(c=>spy.observe(c));
+</script>
+</body>
+</html>
