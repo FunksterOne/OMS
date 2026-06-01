@@ -77,6 +77,9 @@ main{padding:0 clamp(24px,4vw,72px) 120px;min-width:0}
 .hero .meta{font-size:clamp(15px,1.4vw,18px);color:var(--paper-dim);max-width:54ch;line-height:1.65}
 .hero .meta b{color:var(--paper);font-weight:600}
 .hero .scrollcue{margin-top:42px;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.12em;color:var(--muted);display:flex;align-items:center;gap:10px}
+.doclink{display:inline-flex;align-items:center;gap:9px;font-family:"JetBrains Mono",monospace;font-size:12.5px;letter-spacing:.05em;color:var(--gold);text-decoration:none;border:1px solid var(--gold);padding:11px 18px;border-radius:4px;transition:.16s}
+.doclink:hover{background:var(--gold);color:var(--ink)}
+.hero .doclink{margin-top:28px}
 .hero .scrollcue .arr{animation:bob 1.8s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
 
@@ -507,6 +510,7 @@ sections.forEach((s,i)=>{
       <h1>Den strategiske situasjonen i Ukraina <em>etter den femte krigsvinteren</em></h1>
       <div class="meta">Foredrag av <b>generalløytnant (P) Arne Bård Dalhaug</b> — seniorrådgiver i Den Norske Atlanterhavskomité og president i Norges Forsvarsforening. Holdt i <b>Oslo Militære Samfund 20. april 2026</b>.<br><br>Dette dokumentet gjengir alt innhold fra presentasjonen, med <b>kritiske merknader</b> til argumentasjonen og en <b>faktasjekk</b> av de ferske påstandene mot oppdaterte kilder.</div>
       <div class="scrollcue"><span class="arr">↓</span> Bla for å lese · bruk menyen til venstre for å hoppe</div>
+      <div><a class="doclink" href="foredrag-fulltekst.html">▤ Les foredraget i sin helhet →</a></div>
     </section>`;
     toc+=`<a href="#top" data-target="top">Forside</a>`;
     return;
@@ -538,6 +542,7 @@ sections.forEach((s,i)=>{
       <h2 class="title">Kilder og metodisk forbehold</h2>
       <div class="srclist">${srcs.map(x=>`<div class="s"><b>${x[0]}</b> — ${x[1]}</div>`).join('')}</div>
       <div class="method"><b>Metode:</b> Foredraget ble holdt 20.04.2026. Påstander om hendelser etter januar 2026 (Iran-krigen, pavens tale, valgene i Ungarn/Bulgaria, uranbeholdning, frontstatus) er kontrollert mot oppdaterte nyhets- og fagkilder. «Bekreftet» = samsvar med flere uavhengige kilder; «Nyansert» = hovedpoenget holder, men tall/detaljer avviker; «Usikkert» = grunnlaget er omstridt eller dynamisk; «Vurdering» = påstanden er normativ/kontrafaktisk og kan ikke faktasjekkes. <b>Sitater fra tenkere</b> (Howard, Gramsci, Freedman m.fl.) er ikke verifisert ord for ord mot primærkilde.</div>
+      <div style="margin-top:18px"><a class="doclink" href="foredrag-fulltekst.html">▤ Les foredraget i sin helhet — språkvasket fulltekst →</a></div>
     </section>`;
     toc+=`<a href="#${id}" data-target="${id}">Kilder &amp; metode</a>`;
     return;
